@@ -1,0 +1,24 @@
+.homepage-body {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  .homepage-body {
+    flex-direction: row;
+  }
+}
+.homepage-body img {
+  width: 300px;
+  max-width: 90%;
+  object-fit: contain;
+  object-position: 100% 0;
+  margin: auto;
+}
+.homepage-body .bio {
+  padding: 20px 0 0 0;
+}
+@media screen and (min-width: 700px) {
+  .homepage-body .bio {
+    padding: 0 40px;
+  }
+}
