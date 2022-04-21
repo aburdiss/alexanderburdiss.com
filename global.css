@@ -101,6 +101,7 @@ header nav a:focus {
   color: white;
   padding: 8rem 0;
   margin: 0;
+  font-weight: 500;
 }
 
 footer {

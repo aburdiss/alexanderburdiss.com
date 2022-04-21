@@ -4,3 +4,30 @@ h2 {
   margin: 0;
   font-weight: normal;
 }
+
+.project {
+  display: flex;
+  padding: 20px 0;
+}
+.project > img {
+  max-width: 200px;
+  object-fit: contain;
+}
+.project .project-content {
+  padding: 20px 40px;
+}
+.project .purchase-links {
+  width: 200px;
+  flex-shrink: 0;
+}
+.project .purchase-links a {
+  display: inline-block;
+  margin: 10px 0;
+}
+.project .purchase-links a img {
+  max-width: 100%;
+}
+
+.websites .project > img {
+  max-width: 300px;
+}
