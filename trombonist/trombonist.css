@@ -1,0 +1,24 @@
+h2 {
+  background-color: #dddddd;
+  padding: 20px max(20px, calc(((100vw - 1000px) / 2) + 20px));
+  margin: 0;
+  font-weight: normal;
+}
+
+.videos div {
+  padding: 10px;
+}
+.videos div iframe {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+@media screen and (min-width: 800px) {
+  .videos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .videos div {
+    width: 50%;
+  }
+}

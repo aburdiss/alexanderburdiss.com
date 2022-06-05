@@ -1,0 +1,56 @@
+h2 {
+  background-color: #dddddd;
+  padding: 20px max(20px, calc(((100vw - 1000px) / 2) + 20px));
+  margin: 0;
+  font-weight: normal;
+}
+
+.composition {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+@media screen and (min-width: 800px) {
+  .composition {
+    flex-direction: row;
+  }
+}
+.composition img {
+  max-width: min(300px, 100%);
+  margin: auto;
+}
+@media screen and (min-width: 800px) {
+  .composition .composition-content {
+    margin-left: 40px;
+  }
+}
+.composition .composition-meta {
+  font-size: 0.9rem;
+}
+.composition .button {
+  display: block;
+  text-align: center;
+  border: 1px solid #051453;
+  color: #051453;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.composition .button:hover,
+.composition .button:focus {
+  background-color: #051453;
+  text-decoration: none;
+  color: white;
+}
+
+.view-all-compositions {
+  font-size: 1.1rem;
+  margin: 30px 0;
+}
+.performance {
+  padding: 40px 0;
+}
+iframe {
+  max-width: 100%;
+}

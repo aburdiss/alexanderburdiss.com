@@ -7,11 +7,18 @@ h2 {
 
 .project {
   display: flex;
+  flex-direction: column;
   padding: 20px 0;
+}
+@media screen and (min-width: 800px) {
+  .project {
+    flex-direction: row;
+  }
 }
 .project > img {
   max-width: 200px;
   object-fit: contain;
+  margin: auto;
 }
 .project .project-content {
   padding: 20px 40px;
@@ -19,6 +26,7 @@ h2 {
 .project .purchase-links {
   width: 200px;
   flex-shrink: 0;
+  margin: auto;
 }
 .project .purchase-links a {
   display: inline-block;
