@@ -60,10 +60,21 @@ header .inner-content {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
 }
 @media screen and (min-width: 600px) {
   header .inner-content {
     flex-direction: row;
+    justify-content: flex-end;
+  }
+  header .logo {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    background-color: #dddddd;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 15px;
   }
 }
 header .logo {
@@ -107,6 +118,7 @@ header nav a:focus {
 
 footer {
   background-color: #051453;
+  border-top: white 10px double;
   color: white;
   padding: 20px 0;
   position: relative;
@@ -151,7 +163,7 @@ footer address {
 footer .icon-links {
   position: absolute;
   right: max(20px, calc(((100vw - 1000px) / 2) + 20px));
-  top: -45px;
+  top: -50px;
 }
 footer .icon-links img {
   height: 40px;
