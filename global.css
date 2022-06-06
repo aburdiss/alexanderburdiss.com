@@ -56,6 +56,9 @@ a:focus {
   padding-bottom: 40px;
 }
 
+header {
+  border-top: 5px solid #051453;
+}
 header .inner-content {
   display: flex;
   justify-content: space-between;
