@@ -161,3 +161,38 @@ footer .icon-links a:hover img,
 footer .icon-links a:focus img {
   filter: brightness(0.95) hue-rotate(-252deg) saturate(1.98);
 }
+
+/* Fancy <hr> elements */
+hr {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: 3px double #051453;
+  border-bottom: 3px double #051453;
+  color: #051453;
+  text-align: center;
+}
+hr:after {
+  content: "§";
+  font-family: serif;
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+/* Dropcaps, with the .dropcap class */
+.dropcap:first-of-type:first-letter {
+  font-family: serif;
+  color: #051453;
+  font-size: 5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  border: 2px solid black;
+}
