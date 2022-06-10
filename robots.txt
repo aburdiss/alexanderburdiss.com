@@ -1,2 +1,7 @@
 User-agent: Googlebot
 Disallow: /404.html
+
+User-agent: *
+Allow: /
+
+Sitemap: http://alexanderburdiss.com/sitemap.xml
