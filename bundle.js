@@ -1,7 +1,7 @@
-// bundle.js created by bundlejs.sh v1.0.0 Fri Jun 10 01:05:58 EDT 2022 Copyright (c) Alexander Burdiss
+// bundle.js created by bundlejs.sh v1.2.0 Tue Jun 14 19:19:34 EDT 2022
 // ./global.js
-console.log("global");
+(function globaljs() {console.log("global");})();
 // ./composer/composer.js
-console.log("composer");
+(function composercomposerjs() {console.log("composer");})();
 // ./developer/developer.js
-console.log("developer");
+(function developerdeveloperjs() {console.log("developer");})();
