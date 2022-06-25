@@ -9,7 +9,7 @@
 # To ignore files from the bundle, include the flag `// bundle-ignore` in the
 # first line of the file.
 #
-version="1.2.0"
+version="1.2.1"
 projectName="alexander-burdiss"
 
 # Get the current path and ensure that the script is ran from the right place.
@@ -71,3 +71,5 @@ for i in "${filenames[@]}"; do
         echo "})();" >> $bundlefile
     fi
 done
+
+echo "JavaScript Bundled"
