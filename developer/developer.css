@@ -6,9 +6,10 @@
 @media screen and (min-width: 800px) {
   .project {
     flex-direction: row;
+    align-items: center;
   }
 }
-.project > img {
+.apps .project > img {
   max-width: 200px;
   object-fit: contain;
   margin: auto;
@@ -30,5 +31,8 @@
 }
 
 .websites .project > img {
-  max-width: 300px;
+  width: 300px;
+  height: 175px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
