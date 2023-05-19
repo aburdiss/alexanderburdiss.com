@@ -212,7 +212,7 @@ hr {
   text-align: center;
 }
 hr:after {
-  content: "§";
+  content: '§';
   font-family: serif;
   display: inline-block;
   position: relative;
@@ -234,4 +234,21 @@ hr:after {
   margin: 0 10px 0 0;
   padding: 5px;
   border: 2px solid black;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  border: 1px solid #051453;
+  color: #051453;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.button:hover,
+.button:focus {
+  background-color: #051453;
+  text-decoration: none;
+  color: white;
 }

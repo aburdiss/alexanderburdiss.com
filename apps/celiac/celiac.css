@@ -1,0 +1,44 @@
+.banner {
+  background-image: url(./celiacMeta.png);
+  background-size: cover;
+}
+
+tr.no {
+  background-color: #a80011;
+  color: white;
+}
+tr.no a {
+  color: white;
+}
+tr.no a:hover {
+  text-decoration-color: white;
+}
+tr.yes {
+  background-color: #38c79c;
+}
+
+.js-hidden {
+  display: none;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.app table {
+  padding-top: 1rem;
+}
+.app table td {
+  padding: 0.1rem 0.25rem;
+}
+
+.no-results {
+  padding-top: 2rem;
+  text-align: center;
+  display: block;
+}
+.no-results.js-hidden {
+  display: none;
+}

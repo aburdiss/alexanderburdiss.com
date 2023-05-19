@@ -20,22 +20,6 @@
 .composition .composition-meta {
   font-size: 0.9rem;
 }
-.composition .button {
-  display: block;
-  text-align: center;
-  border: 1px solid #051453;
-  color: #051453;
-  padding: 10px;
-  border-radius: 8px;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-.composition .button:hover,
-.composition .button:focus {
-  background-color: #051453;
-  text-decoration: none;
-  color: white;
-}
 
 .view-all-compositions {
   font-size: 1.1rem;
