@@ -1,5 +1,8 @@
 .button-container {
-  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
 .project {

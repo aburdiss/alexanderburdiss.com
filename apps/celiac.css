@@ -3,6 +3,10 @@
   background-size: cover;
 }
 
+.breadcrumb {
+  padding-top: 1rem;
+}
+
 tr.no {
   background-color: #a80011;
   color: white;
@@ -29,6 +33,7 @@ tr.yes {
 
 .app table {
   padding-top: 1rem;
+  width: 100%;
 }
 .app table td {
   padding: 0.1rem 0.25rem;

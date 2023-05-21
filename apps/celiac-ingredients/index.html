@@ -18,7 +18,7 @@
     <meta property="og:title" content="Celiac Safe Ingredients" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://alexanderburdiss.com" />
-    <meta property="og:image" content="./celiacMeta.png" />
+    <meta property="og:image" content="../celiacMeta.png" />
     <meta
       property="og:description"
       content="A web app to assist grocery shopping when you have celiac disease."
@@ -34,7 +34,7 @@
     <title>Celiac Safe Ingredients</title>
     <link href="/normalize.css" rel="stylesheet" />
     <link href="/global.css" rel="stylesheet" />
-    <link href="./celiac.css" rel="stylesheet" />
+    <link href="../celiac.css" rel="stylesheet" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -55,9 +55,20 @@
       <section class="banner">
         <h1>Celiac Safe Ingredients</h1>
       </section>
+      <div class="breadcrumb inner-content">
+        <a href="/developer/">&lt; Developer</a>
+      </div>
       <section class="app">
-        <label for="search">Search</label>
-        <input type="text" id="search" />
+        <div>
+          <label for="search">Search</label>
+          <input type="text" id="search" />
+        </div>
+        <div>
+          <label for="yes">Show Yes</label>
+          <input type="checkbox" id="yes" checked />
+          <label for="no">Show No</label>
+          <input type="checkbox" id="no" checked />
+        </div>
         <div class="no-results js-hidden">
           There are no results for your search.
         </div>
@@ -5943,10 +5954,10 @@
             <a href="mailto:aburdiss@icloud.com">aburdiss@icloud.com</a>
           </address>
         </div>
-        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="../../privacy-policy/">Privacy Policy</a>
       </div>
     </footer>
-    <script src="./celiac.js"></script>
+    <script src="../celiac.js"></script>
     <script src="/bundle.js"></script>
   </body>
 </html>
