@@ -20,6 +20,9 @@ tr.no a:hover {
 tr.yes {
   background-color: #38c79c;
 }
+tr.highrisk {
+  background-color: yellow;
+}
 
 .js-hidden {
   display: none;
