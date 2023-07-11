@@ -115,6 +115,7 @@ header nav a:focus {
 .banner {
   background-image: url(./assets/images/banner.jpg);
   background-size: cover;
+  background-position: center;
 }
 .banner h1 {
   text-align: center;
