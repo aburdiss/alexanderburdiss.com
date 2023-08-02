@@ -18,6 +18,12 @@ footer.innerHTML = `
 </nav>
 <div class="inner-content">
   <div class="footer-text">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/composer/">Composer</a>
+      <a href="/developer/">Developer</a>
+      <a href="/trombonist/">Trombonist</a>
+    </nav>
     <div id="date">© 2022 Alexander Burdiss</div>
     <div>All Rights Reserved</div>
     <address>

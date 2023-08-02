@@ -161,6 +161,7 @@ footer .inner-content {
 @media screen and (min-width: 400px) {
   footer .inner-content {
     flex-direction: row;
+    align-items: flex-end;
   }
 }
 footer .inner-content > a {
@@ -180,9 +181,21 @@ footer .footer-text {
   line-height: 1.2;
   margin-bottom: 10px;
 }
+
+footer .footer-text nav {
+  margin-bottom: 1rem;
+}
+footer .footer-text nav a {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 @media screen and (min-width: 400px) {
   footer .footer-text {
     margin-bottom: 0;
+  }
+  footer .footer-text nav a {
+    text-align: left;
   }
 }
 footer address {
