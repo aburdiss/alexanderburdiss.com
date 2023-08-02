@@ -10,7 +10,7 @@
 # first line of the file.
 #
 version="1.2.1"
-projectName="alexander-burdiss"
+projectName="alexanderburdiss.com"
 
 # Get the current path and ensure that the script is ran from the right place.
 dirname=$(pwd)
