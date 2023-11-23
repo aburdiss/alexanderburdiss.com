@@ -1,5 +1,5 @@
 #!/bin/bash
-# shelby-ready/scripts/generateSitemap.sh
+# alexanderburdiss.com/scripts/generateSitemap.sh
 # Created by Alexander Burdiss 6/23/22
 # Copyright (c) Alexander Burdiss
 #
@@ -7,7 +7,7 @@
 #
 
 version="1.0.0"
-projectName="alexander-burdiss"
+projectName="alexanderburdiss.com"
 # Files to ignore from the sitemap
 ignoredFiles=(
   "./404.html"
@@ -62,7 +62,7 @@ for i in "${filenames[@]}"; do
       temp_var="${i#.}"
       path="${temp_var%index.html}"
       priority="0.80";
-      if [[ $path == "/" ]]; then 
+      if [[ $path == "/" ]]; then
         priority="1.00"
       fi
       echo "  <url>" >> $sitemapfile
