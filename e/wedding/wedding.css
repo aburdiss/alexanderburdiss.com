@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .visually-hidden-accessibility {
@@ -33,17 +36,47 @@
   background-color: white;
 }
 
+hgroup {
+  padding: 60px 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Alex Brush', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  margin: 0.67rem 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.Image-Container {
+  height: 600px;
+  margin-bottom: 60px;
+}
+
 .Main-Image {
-  display: inline-block;
+  position: absolute;
+  height: 600px;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: center 30%;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 .button {
   display: block;
   text-align: center;
-  border: 1.5px solid #5c4094;
-  color: #5c4094;
+  border: 1.5px solid #36046d;
+  color: #36046d;
   padding: 10px;
   transition: all 0.2s;
   text-decoration: none;
@@ -54,7 +87,7 @@
 }
 .button:hover,
 .button:focus {
-  background-color: #5c4094;
+  background-color: #36046d;
   text-decoration: none;
   color: white;
 }
@@ -63,10 +96,25 @@ main {
   padding-top: 40px;
 }
 
+.rsvp {
+  text-align: center;
+}
+
+a {
+  color: #36046d;
+  font-weight: 600;
+  transition: text-decoration-color 0.3s;
+  text-decoration-color: transparent;
+}
+a:hover,
+a:focus {
+  text-decoration-color: #36046d;
+}
+
 footer {
-  background-color: #5c4094;
+  background-color: #dcb4fc;
   border-top: white 10px double;
-  color: white;
+  color: black;
   padding: 20px 0;
   position: relative;
   margin-top: 50px;
@@ -85,15 +133,6 @@ footer .inner-content {
 }
 footer .inner-content > a {
   font-size: 0.9rem;
-}
-footer a {
-  color: white;
-  transition: text-decoration-color 0.3s;
-  text-decoration-color: transparent;
-}
-footer a:hover,
-footer a:focus {
-  text-decoration-color: white;
 }
 footer .footer-text {
   font-size: 0.8rem;
