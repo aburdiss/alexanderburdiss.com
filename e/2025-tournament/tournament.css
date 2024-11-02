@@ -88,7 +88,9 @@ h2 {
   column-gap: 1rem;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 4rem;
+}
+.game:first-of-type {
+  margin-top: 2rem;
 }
 .game .the-game {
   flex: 1;
@@ -98,18 +100,18 @@ h2 {
   flex-direction: column;
   text-decoration: none;
 }
+@media (min-width: 500px) {
+  .game .the-game {
+    margin-bottom: 1rem;
+    flex-direction: row;
+  }
+}
 @media (min-width: 800px) {
   .game {
     flex-direction: row;
   }
   .game .the-game {
     margin-bottom: 0;
-  }
-}
-@media (min-width: 500px) {
-  .game .the-game {
-    margin-bottom: 1rem;
-    flex-direction: row;
   }
 }
 .game img {
@@ -138,6 +140,11 @@ h2 {
 .game .learn:focus {
   background: #333;
 }
+
+hr {
+  margin: 2rem 0;
+}
+
 footer {
   background-color: #000;
   border-top: #fff 10px double;
