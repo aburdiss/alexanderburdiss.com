@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.visually-hidden-accessibility {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.inner-content {
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.skip-link {
+  height: 1px;
+  position: absolute;
+  width: auto;
+  overflow: hidden;
+  background-color: transparent;
+}
+.skip-link:focus {
+  height: auto;
+  z-index: 100;
+  background-color: white;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  border: 1.5px solid #36046d;
+  color: #36046d;
+  padding: 10px;
+  transition: all 0.2s;
+  text-decoration: none;
+  width: 200px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.button:hover,
+.button:focus {
+  background-color: #36046d;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding-top: 40px;
+}
+
+.logo {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.details {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.game {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.game .the-game {
+  flex: 1;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+@media (min-width: 800px) {
+  .game {
+    flex-direction: row;
+  }
+  .game .the-game {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 500px) {
+  .game .the-game {
+    margin-bottom: 1rem;
+    flex-direction: row;
+  }
+}
+.game img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+.game h3 {
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s;
+}
+.game:hover h3,
+.game:focus h3 {
+  color: #333;
+}
+.game .learn {
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.game .learn:hover,
+.game .learn:focus {
+  background: #333;
+}
+footer {
+  background-color: #000;
+  border-top: #fff 10px double;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  margin-top: 50px;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover,
+footer a:focus {
+  color: #ddd;
+}
+footer .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 400px) {
+  footer .inner-content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+footer .inner-content > a {
+  font-size: 0.9rem;
+}
+footer .footer-text {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 400px) {
+  footer .footer-text {
+    margin-bottom: 0;
+  }
+}
+footer address {
+  font-style: normal;
+}
