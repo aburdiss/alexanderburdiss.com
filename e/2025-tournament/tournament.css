@@ -118,15 +118,32 @@ h2 {
   height: 150px;
   width: 150px;
   object-fit: contain;
+  transition: transform 0.3s;
 }
-.game h3 {
+.the-game h3 {
   font-weight: bold;
   color: black;
   transition: color 0.3s;
 }
-.game:hover h3,
-.game:focus h3 {
+.the-game strong {
+  font-weight: bold;
+  color: black;
+}
+.the-game .green {
+  color: green;
+  font-weight: bold;
+}
+.the-game:hover h3,
+.the-game:focus h3 {
   color: #333;
+}
+.the-game:hover img,
+.the-game:focus img {
+  transform: scale(1.05);
+}
+.game .links {
+  display: flex;
+  flex-direction: column;
 }
 .game .learn {
   text-decoration: none;
@@ -139,6 +156,9 @@ h2 {
 .game .learn:hover,
 .game .learn:focus {
   background: #333;
+}
+.game .learn:not(:first-of-type) {
+  margin-top: 1rem;
 }
 
 hr {
