@@ -19,8 +19,8 @@
 .inner-content {
   max-width: 1000px;
   margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .skip-link {
@@ -81,6 +81,30 @@ h2 {
   background-color: black;
   color: white;
   padding: 1rem 2rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+hr {
+  border: none;
+  border-bottom: 6px double black;
+  position: relative;
+}
+hr:after {
+  content: '';
+  background-image: url(./hex.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul {
+  padding-left: 1rem;
 }
 
 .game {
@@ -124,10 +148,13 @@ h2 {
   font-weight: bold;
   color: black;
   transition: color 0.3s;
+  margin-bottom: 0.5rem;
 }
 .the-game strong {
   font-weight: bold;
   color: black;
+  margin-bottom: 1rem;
+  display: block;
 }
 .the-game .green {
   color: green;
@@ -144,6 +171,12 @@ h2 {
 .game .links {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .game .links {
+    align-items: flex-end;
+  }
 }
 .game .learn {
   text-decoration: none;
@@ -152,6 +185,8 @@ h2 {
   padding: 1rem 2rem;
   border-radius: 8px;
   transition: background-color 0.3s;
+  text-align: center;
+  width: fit-content;
 }
 .game .learn:hover,
 .game .learn:focus {
