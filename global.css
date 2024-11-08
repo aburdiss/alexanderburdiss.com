@@ -3,6 +3,23 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+.active {
+  height: 4px;
+  width: 90px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #051453;
+  position: absolute;
+  top: calc(100% - 4px);
+  z-index: 1;
+  right: 0;
+  opacity: 0;
+}
+
 .visually-hidden-accessibility {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -78,6 +95,7 @@ header .inner-content {
   }
   header .logo {
     position: absolute;
+    z-index: 2;
     left: 20px;
     top: 0;
     background-color: #dddddd;

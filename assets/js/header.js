@@ -9,6 +9,7 @@ header.innerHTML = `
     <a href="/composer/">Composer</a>
     <a href="/developer/">Developer</a>
     <a href="/trombonist/">Trombonist</a>
+    <div class='active' style='view-transition-name: active-bar'></div>
   </nav>
 </div>
 `;

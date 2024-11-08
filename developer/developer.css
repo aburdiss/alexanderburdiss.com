@@ -1,3 +1,9 @@
+header .active {
+  opacity: 1;
+  right: 7.2rem;
+  width: 90px;
+}
+
 .button-container {
   display: flex;
   flex-wrap: wrap;

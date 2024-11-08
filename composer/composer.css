@@ -1,3 +1,8 @@
+header .active {
+  opacity: 1;
+  right: 12.7rem;
+}
+
 .composition {
   display: flex;
   flex-direction: column;
