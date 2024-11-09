@@ -1,4 +1,192 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
+}
+
+.inner-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+li {
+  padding-bottom: 0.4rem;
+}
+
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+h2 {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+header {
+  margin-top: 1rem;
+  background-color: #ddd;
+  font-family: Tahoma, Arial, sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header .inner-content {
+  position: relative;
+}
+
+header img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 200px;
+  position: absolute;
+  right: 2rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: none;
+}
+
+@media (min-width: 800px) {
+  header img {
+    display: block
+  }
+}
+
+main {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+main section {
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+}
+
+main h2 {
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.contact a {
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact > * {
+  margin-top: 0.5rem;
+}
+
+.address {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.job:not(:first-of-type) h3 {
+  padding-top: 0.5rem;
+}
+.job .meta {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-optical-sizing: 0.8rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.job .meta span:not(:first-child) {
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  .contact::after,
+  .education::after,
+  .skills::after,
+  .profile::after,
+  .experience::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: calc(-1.5rem - 1px);
+  }
+  .profile::before,
+  .experience::before,
+  .awards::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: calc(-1.5rem - 1px);
+  }
+
+  .contact {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  .profile {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  .experience {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 4;
+  }
+
+  .skills {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  .education {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+
+  .awards {
+    grid-row-start: 4;
+    grid-column-start: 2;
+  }
+
+  .activites {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#051453" />
+    <meta name="theme-color" content="#fff" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -39,32 +39,63 @@
     <link href="./resume.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Alexander Burdiss</h1>
-    <aside class="sidebar">
-      <a href="tel:+19286066495">(+1) 928-606-6495</a>
-      <a href="mailto:aburdiss@icloud.com">aburdiss@icloud.com</a>
-      <div class="address">
-        <div>4532 Bayberry Cove</div>
-        <div>Bellbrook, OH 45305</div>
+    <header>
+      <div class="inner-content">
+        <div class="top">
+          <hgroup>
+            <h1>Alexander Burdiss</h1>
+            <h2>Mobile and Web Developer, Musician</h2>
+          </hgroup>
+          <img src="/assets/images/headshot.jpg" alt="Alexander Burdiss" />
+        </div>
       </div>
-    </aside>
+    </header>
     <main>
-      <section>
+      <section class="contact">
+        <a href="tel:+19286066495"
+          ><img src="./phone.svg" alt="phone" /><span>928.606.6495</span></a
+        >
+        <a href="mailto:aburdiss@icloud.com"
+          ><img src="./mail.svg" alt="mail" /><span
+            >aburdiss@icloud.com</span
+          ></a
+        >
+        <a href="https://github.com/aburdiss"
+          ><img src="./github.svg" alt="github" /><span
+            >github.com/aburdiss</span
+          ></a
+        >
+        <a href="https://alexanderburdiss.com"
+          ><img src="./user.svg" alt="user" /><span
+            >alexanderburdiss.com</span
+          ></a
+        >
+        <div class="address">
+          <img src="./pin.svg" alt="pin" />
+          <div>
+            <div>4532 Bayberry Cove</div>
+            <div>Bellbrook, OH 45305</div>
+          </div>
+        </div>
+      </section>
+      <section class="profile">
         <h2>Profile</h2>
         <p>
-          I am a frontend developer/quality assurance engineer by day, and
-          composer/ trombonist by night. I set up automated testing frameworks,
+          I am a web and mobile developer/quality assurance engineer by day, and
+          composer/trombonist by night. I set up automated testing frameworks,
           write comprehensive tests, build components, and maintain React and
           React Native applications
         </p>
       </section>
-      <section>
+      <section class="experience">
         <h2>Experience</h2>
         <div class="job">
           <h3>Web Developer, Quality Assurance Specialist</h3>
-          <span class="company">Reynolds and Reynolds</span>
-          <span class="location">Dayton, OH</span>
-          <span class="tenure">May 2020 - Present</span>
+          <div class="meta">
+            <span class="company">Reynolds and Reynolds</span>
+            <span class="location">Dayton, OH</span>
+            <span class="tenure">May 2020 - Present</span>
+          </div>
           <p>
             Automating QA tools and processes. Building/maintaining React and
             React Native components and applications with an Agile team
@@ -72,9 +103,11 @@
         </div>
         <div class="job">
           <h3>Bass Trombonist</h3>
-          <span class="company">Flagstaff Symphony Orchestra</span>
-          <span class="location">Flagstaff, AZ</span>
-          <span class="tenure">August 2019 - May 2020</span>
+          <div class="meta">
+            <span class="company">Flagstaff Symphony Orchestra</span>
+            <span class="location">Flagstaff, AZ</span>
+            <span class="tenure">August 2019 - May 2020</span>
+          </div>
           <p>
             Performing works such as Tchaikovsky ‘Symphony No. 5,’ Bruckner
             ‘Symphony No. 4,’ and Stravinsky’s ‘Firebird Suite.
@@ -82,11 +115,13 @@
         </div>
         <div class="job">
           <h3>Computer Science Lab Assistant</h3>
-          <span class="company"
-            >Northern Arizona University Department of Computer Science</span
-          >
-          <span class="location">Flagstaff, AZ</span>
-          <span class="tenure">August 2019 - May 2020</span>
+          <div class="meta">
+            <span class="company"
+              >Northern Arizona University Department of Computer Science</span
+            >
+            <span class="location">Flagstaff, AZ</span>
+            <span class="tenure">August 2019 - May 2020</span>
+          </div>
           <p>
             Assisting Northern Arizona University computer science students
             learning Python in a lab setting.
@@ -94,11 +129,13 @@
         </div>
         <div class="job">
           <h3>Website Manager, Student Worker</h3>
-          <span class="company"
-            >Northern Arizona University Program in Intensive English</span
-          >
-          <span class="location">Flagstaff, AZ</span>
-          <span class="tenure">June 2017 - May 2020</span>
+          <div class="meta">
+            <span class="company"
+              >Northern Arizona University Program in Intensive English</span
+            >
+            <span class="location">Flagstaff, AZ</span>
+            <span class="tenure">June 2017 - May 2020</span>
+          </div>
           <p>
             Managing and updating the PIE website, writing software to automate
             various job duties, and assisting Faculty, Staff, and Administration
@@ -107,9 +144,11 @@
         </div>
         <div class="job">
           <h3>Supervisor, Stage Manager</h3>
-          <span class="company">Ardrey Memorial Auditorium</span>
-          <span class="location">Flagstaff, AZ</span>
-          <span class="tenure">July 2016 - July 2019</span>
+          <div class="meta">
+            <span class="company">Ardrey Memorial Auditorium</span>
+            <span class="location">Flagstaff, AZ</span>
+            <span class="tenure">July 2016 - July 2019</span>
+          </div>
           <p>
             Overseeing a crew of up to 20 people and ensuring live performances
             run smoothly. Training and assisting other crew to use the equipment
@@ -117,7 +156,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="education">
         <h2>Education</h2>
         <h3>
           BA Music Performance Trombone Emphasis, Minor in Computer Science
@@ -125,11 +164,11 @@
         <span class="school">Northern Arizona University</span>
         <span class="tenure">August 2016 - May 2020</span>
       </section>
-      <section>
+      <section class="skills">
         <h2>Skills</h2>
         <ul>
           <li>HTML, CSS, JavaScript</li>
-          <li>Pair Programming/assisting developers</li>
+          <li>Pair Programming</li>
           <li>React</li>
           <li>React Native</li>
           <li>Gutenberg</li>
@@ -137,14 +176,11 @@
           <li>Jest/Unit Testing</li>
           <li>Cypress/End to End testing</li>
           <li>Web and Mobile Accessibility</li>
-          <li>QA Automation</li>
           <li>iOS Devolpment</li>
           <li>Android Development</li>
-          <li>Documentation</li>
-          <li>Troubleshooting</li>
         </ul>
       </section>
-      <section>
+      <section class="awards">
         <h2>Awards</h2>
         <ul>
           <li>
@@ -152,7 +188,7 @@
           </li>
           <li>Rookie of the Year (2021) - Reynolds and Reynolds</li>
           <li>
-            College of Arts and Letters STandard Bearer (2020) - Northern
+            College of Arts and Letters Standard Bearer (2020) - Northern
             Arizona University
           </li>
           <li>
@@ -165,8 +201,8 @@
           <li>Eagle Scout Rank (2014) - Boy Scouts of America</li>
         </ul>
       </section>
-      <section>
-        <h2>Activites</h2>
+      <section class="activites">
+        <h2>Organizations</h2>
         <ul>
           <li>International Trombone Association - 2016 - 2024</li>
           <li>
