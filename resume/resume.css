@@ -2,8 +2,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Noto Serif', 'Times New Roman', Times, serif;
+}
+
 .inner-content {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: auto;
   padding: 0 2rem;
 }
@@ -14,6 +22,14 @@ h3,
 p,
 ul {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  page-break-after: avoid;
 }
 
 a {
@@ -30,10 +46,11 @@ li {
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
-  font-size: 2rem;
-  letter-spacing: 1px;
+  font-size: 1.6rem;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.25rem;
 }
 h2 {
   font-weight: 300;
@@ -43,9 +60,14 @@ h2 {
 header {
   margin-top: 1rem;
   background-color: #ddd;
-  font-family: Tahoma, Arial, sans-serif;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+@media (min-width: 50rem) {
+  header {
+    margin-top: 5rem;
+  }
 }
 
 header .inner-content {
@@ -53,10 +75,10 @@ header .inner-content {
 }
 
 header img {
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   object-fit: cover;
-  border-radius: 200px;
+  border-radius: 12.5rem;
   position: absolute;
   right: 2rem;
   bottom: 50%;
@@ -64,37 +86,39 @@ header img {
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   header img {
-    display: block
+    display: block;
   }
 }
 
 main {
-  font-family: 'Times New Roman', Times, serif;
   margin-top: 2rem;
   padding: 0 2rem;
+  margin-bottom: 5rem;
+  section {
+    position: relative;
+    margin-top: 1.5rem;
+  }
 }
 
-main section {
-  position: relative;
-}
-
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   main {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
-    max-width: 900px;
+    max-width: 56.25rem;
     margin: 2rem auto;
+    section {
+      margin-top: unset;
+    }
   }
 }
 
 main h2 {
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1rem;
   margin-bottom: 1rem;
-  font-family: Tahoma, Arial, sans-serif;
 }
 
 .contact a {
@@ -102,10 +126,26 @@ main h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: font-variation-settings 0.3s;
+  font-variation-settings: 'wght' 400;
+  font-size: 0.875rem;
+  &:hover,
+  &:focus {
+    font-variation-settings: 'wght' 600;
+  }
+
+  img {
+    width: 0.875rem;
+    height: 0.875rem;
+
+  }
 }
 
-.contact > * {
-  margin-top: 0.5rem;
+.contact .inner-content {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
 .address {
@@ -115,21 +155,21 @@ main h2 {
 }
 
 .job:not(:first-of-type) h3 {
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 .job .meta {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
   font-optical-sizing: 0.8rem;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.4rem;
 }
 .job .meta span:not(:first-child) {
   padding-left: 0.5rem;
 }
 
-@media (min-width: 800px) {
-  .contact::after,
+@media (min-width: 50rem) {
   .education::after,
   .skills::after,
   .profile::after,
@@ -137,21 +177,20 @@ main h2 {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background-color: black;
     left: 0;
-    bottom: calc(-1.5rem - 1px);
+    bottom: calc(-1.5rem - 0.0625rem);
   }
-  .profile::before,
   .experience::before,
   .awards::before {
     content: '';
     position: absolute;
-    width: 2px;
+    width: 0.125rem;
     height: 100%;
     background-color: black;
     top: 0;
-    left: calc(-1.5rem - 1px);
+    left: calc(-1.5rem - 0.0625rem);
   }
 
   .contact {
@@ -161,7 +200,8 @@ main h2 {
 
   .profile {
     grid-row-start: 1;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .experience {
@@ -188,5 +228,30 @@ main h2 {
   .activites {
     grid-row-start: 4;
     grid-column-start: 1;
+  }
+}
+
+@page {
+  size: letter portrait;
+}
+
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+  header {
+    margin-top: 0rem;
+  }
+  .contact a {
+    font-size: 0.75rem;
+    img {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+  main {
+    margin-top: 1.5rem;
   }
 }
