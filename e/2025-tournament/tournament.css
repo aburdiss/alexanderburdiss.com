@@ -124,10 +124,17 @@ ul {
   flex-direction: column;
   text-decoration: none;
 }
+
+.game .the-game > div {
+  text-align: center;
+}
 @media (min-width: 500px) {
   .game .the-game {
     margin-bottom: 1rem;
     flex-direction: row;
+  }
+  .game .the-game > div {
+    text-align: left;
   }
 }
 @media (min-width: 800px) {
