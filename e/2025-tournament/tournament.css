@@ -81,8 +81,77 @@ h2 {
   background-color: black;
   color: white;
   padding: 1rem 2rem;
+  line-height: 2rem;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+h2:has(span)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: -1rem;
+  width: 40px;
+  height: calc(4rem - 1px);
+  background-color: white;
+  border-bottom-right-radius: 30px;
+  border-bottom: 1px solid black;
+}
+
+h2:has(span)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: -3rem;
+  width: 40px;
+  height: 4rem;
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-top: 1px solid black;
+}
+
+h2 span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-top: 1rem;
+  width: 40px;
+  height: 2rem;
+  background-color: black;
+  z-index: -1;
+}
+
+h2 span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: -3rem;
+  width: 40px;
+  height: 2rem;
+  background-color: black;
+  z-index: -1;
+}
+
+@media (min-width: 1000px) {
+  h2:has(span)::before {
+    width: calc((100% - 920px) * 0.5);
+  }
+
+  h2:has(span)::after {
+    width: calc((100% - 920px) * 0.5);
+  }
+
+  h2 span::before {
+    width: calc((100% - 920px) * 0.5);
+  }
+
+  h2 span::after {
+    width: calc((100% - 920px) * 0.5);
+  }
 }
 
 hr {
@@ -147,9 +216,10 @@ ul {
 }
 .game img {
   height: 150px;
-  width: 150px;
+  max-width: 150px;
   object-fit: contain;
   transition: transform 0.3s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .the-game h3 {
   font-weight: bold;
