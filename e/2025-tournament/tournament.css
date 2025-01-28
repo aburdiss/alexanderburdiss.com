@@ -154,6 +154,30 @@ h2 span::after {
   }
 }
 
+h4 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-top-left-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h4::before {
+  content: '*';
+  color: red;
+  position: absolute;
+  top: 0;
+  top: -25px;
+  left: -10px;
+  font-size: 6rem;
+  z-index: -1;
+}
+
 hr {
   border: none;
   border-bottom: 6px double black;
@@ -189,6 +213,19 @@ ul {
   align-items: center;
   flex-direction: column;
 }
+.expansion {
+  border-left: 1px solid black;
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px dashed black;
+}
+h4 + .expansion {
+  border-top: none;
+}
+.expansion ul {
+  margin-bottom: 0;
+}
 .game:first-of-type {
   margin-top: 2rem;
 }
@@ -217,6 +254,10 @@ ul {
   .game {
     flex-direction: row;
   }
+  .expansion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .game .the-game {
     margin-bottom: 0;
   }
@@ -227,6 +268,11 @@ ul {
   object-fit: contain;
   transition: transform 0.3s;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.expansion img {
+  height: unset;
+  max-height: 150px;
+  width: 150px;
 }
 .the-game h3 {
   font-weight: bold;
