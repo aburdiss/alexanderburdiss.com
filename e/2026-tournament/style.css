@@ -1,0 +1,40 @@
+details {
+  padding-top: 1rem;
+}
+
+h2 {
+  background-color: #2b2d42;
+}
+
+h2:has(span)::before {
+  border-bottom: 1px solid #2b2d42;
+}
+
+h2:has(span)::after {
+  border-top: 1px solid #2b2d42;
+}
+
+h2 span::before {
+  background-color: #2b2d42;
+}
+
+h2 span::after {
+  background-color: #2b2d42;
+}
+
+.expansion {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.expansion img {
+  width: 75px;
+  height: 75px;
+}
+
+.game img {
+  box-shadow: none;
+}
+
+footer {
+  background-color: #2b2d42;
+}
