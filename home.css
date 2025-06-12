@@ -22,3 +22,10 @@
     padding: 0 40px;
   }
 }
+
+.events-container {
+  padding-top: 2rem;
+  display: flex;
+  gap: 2rem;
+
+}
