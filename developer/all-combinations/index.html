@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Variants</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .Cell {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        font-size: 11pt;
+      }
+      @media print {
+        h1 {
+          outline: none;
+        }
+        .Description,
+        label {
+          display: none;
+        }
+        .Cell {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Description">
+      <p>
+        This page allows you to create a checklist of every possible combination
+        of expansions for a game. In the input, add the number of expansions,
+        and Ctrl/Cmd + P to print out the chart! (styles will look best in
+        Chrome or Edge)
+      </p>
+    </div>
+    <h1 contenteditable="true">Click to add game title</h1>
+    <label>
+      Expansions:
+      <input placeholder="number of expansions" id="number" type="number" />
+    </label>
+    <div id="container"></div>
+    <script>
+      const input = document.querySelector('#number');
+      input.addEventListener('keyup', (event) => {
+        const totalExpansions = Number(event.target.value);
+        if (totalExpansions > 10) {
+          container.innerHTML = 'ERROR, TOO MANY EXPANSIONS';
+        } else if (totalExpansions === 0) {
+          container.innerHTML = '';
+        } else {
+          build(totalExpansions);
+        }
+      });
+      function build(totalExpansions) {
+        const container = document.querySelector('#container');
+        container.innerHTML = '';
+        const options = [];
+        for (let index = 0; index < totalExpansions; index++) {
+          options.push(index + 1);
+        }
+        const allOptions = getCombinations(options);
+        const flat = allOptions.map(function (list) {
+          list.unshift('Base');
+          return list.join(', ');
+        });
+        flat.unshift('Base');
+        flat.forEach(function (option) {
+          const optionEl = document.createElement('div');
+          optionEl.classList.add('Cell');
+          optionEl.innerText = option;
+          container.appendChild(optionEl);
+        });
+      }
+
+      function getCombinations(valuesArray) {
+        var combi = [];
+        var temp = [];
+        var slent = Math.pow(2, valuesArray.length);
+
+        for (var i = 0; i < slent; i++) {
+          temp = [];
+          for (var j = 0; j < valuesArray.length; j++) {
+            if (i & Math.pow(2, j)) {
+              temp.push(valuesArray[j]);
+            }
+          }
+          if (temp.length > 0) {
+            combi.push(temp);
+          }
+        }
+
+        combi.sort((a, b) => a.length - b.length);
+        return combi;
+      }
+    </script>
+  </body>
+</html>
